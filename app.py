@@ -43,7 +43,7 @@ async def handle_client(websocket, path):
     except Exception as e:
         print("Unexpected error: %s", e)
 
-start_server = websockets.serve(handle_client, "0.0.0.0", 80))
+start_server = websockets.serve(handle_client, "0.0.0.0", os.getenv('PORT'))
 
 print('WebSocket server running on port 8081')
 
